@@ -54,7 +54,7 @@ class CardTraderHome extends Component {
 
       const cards = {
         cardCount: cardCount,
-        cardIDs: cardIDs
+        cardIDs: cardIDs.sort()
       }
 
       this.setState( {cards: cards, account: account });
