@@ -119,7 +119,8 @@ class CardSeriesShow extends Component {
   render() {
     return (
       <Layout menuAction={this.startLoader}>
-        <h3>Card Series Details&nbsp;&nbsp;
+        <h3>Card Series Details {this.state.seriesID > 0 ? '': '...Loading data'}
+          &nbsp;&nbsp;
           <Loader size='mini' inline
                   active={this.state.loading}/>
         </h3>
@@ -138,7 +139,7 @@ class CardSeriesShow extends Component {
         <Grid width={10} padded>
           <Grid.Row>
             <Grid.Column>
-              {this.state.seriesID > 0 ? this.renderCards(): <label>Loading data</label>}
+              {this.state.seriesID > 0 ? this.renderCards(): ''}
             </Grid.Column>
           </Grid.Row>
           <Grid.Row>

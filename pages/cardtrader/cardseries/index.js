@@ -108,7 +108,13 @@ class CardSeriesIndex extends Component {
     return (
       <Layout menuAction={this.startLoader} page={"/cardseries"}>
         <div>
-          <h3>Manage Card Series&nbsp;&nbsp;
+          <h3>Manage Card Series
+            {
+              this.state.isSet ?
+                this.state.cardSeriesCount > 0 ? ''
+                  : " No Card Series Found"
+                : "...Loading data please wait"
+            } &nbsp;&nbsp;
             <Loader size='mini' inline
                     active={this.state.loading}/>
           </h3>
@@ -125,9 +131,7 @@ class CardSeriesIndex extends Component {
           </Link>
           {
             this.state.cardSeriesCount > 0 ?
-            this.renderCardSeries():
-            this.state.isSet ? "No Card Series Found":
-            "Loading data please wait"
+            this.renderCardSeries(): ''
           }
         </div>
         {

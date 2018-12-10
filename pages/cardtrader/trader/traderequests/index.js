@@ -192,7 +192,7 @@ class MyTradeRequests extends Component {
     return (
       <Layout menuAction={this.startLoader}>
         <h3>
-          Trade Requests for {this.state.account}&nbsp;&nbsp;
+          Trade Requests {this.state.account === 0 ? '....Loading Data' : 'for ' + this.state.account}&nbsp;&nbsp;
           <Loader size='mini' inline
                   active={this.state.loading}/>
         </h3>

@@ -106,7 +106,7 @@ class CardTraderHome extends Component {
   render() {
     return (
       <Layout menuAction={this.startLoader}>
-        <h3>Cards for {this.state.account}&nbsp;&nbsp;
+        <h3>Cards {this.state.account === 0 ? '...Loading Data' : 'for ' + this.state.account}&nbsp;&nbsp;
           <Loader size='mini' inline
                   active={this.state.loading}/>
         </h3>

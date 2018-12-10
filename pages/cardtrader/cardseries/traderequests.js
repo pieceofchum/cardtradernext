@@ -79,7 +79,7 @@ class TradeRequestIndex extends Component {
 
     return (
       <Layout menuAction={this.startLoader} >
-        <h3>Trade Requests&nbsp;&nbsp;
+        <h3>Trade Requests {this.props.account === 0 ? '....Loading Data' : 'for ' + this.props.account}&nbsp;&nbsp;
           <Loader size='mini' inline
                   active={this.state.loading}/>
         </h3>
